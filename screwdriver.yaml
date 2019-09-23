@@ -1,0 +1,14 @@
+shared:
+    image: node:8
+
+parameters:
+  _started_at: simple
+  user:
+      value: adong
+      description: User running build
+
+jobs:
+    main:
+        requires: [~pr, ~commit]
+        steps:
+            - test: echo ok
