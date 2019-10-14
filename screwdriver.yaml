@@ -12,3 +12,5 @@ jobs:
         requires: [~pr, ~commit]
         steps:
             - test: echo ok
+            - p1:  echo $(meta get parameters._started_at)
+            - p2:  echo $(meta get parameters.user)
